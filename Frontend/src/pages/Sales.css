@@ -1,0 +1,112 @@
+.sales-header {
+  margin-bottom: 2rem;
+}
+
+.sales-header h1 {
+  color: #1f2937;
+}
+
+.sales-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.deal-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.deal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.deal-header h3 {
+  color: #1f2937;
+  margin-right: 1rem;
+}
+
+.deal-stage {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stage-discovery {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.stage-proposal {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.stage-negotiation {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.stage-won {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.stage-lost {
+  background-color: #fecaca;
+  color: #dc2626;
+}
+
+.deal-company {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.deal-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.deal-probability,
+.deal-owner,
+.deal-days {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
