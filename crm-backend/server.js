@@ -51,15 +51,23 @@ const initializeDatabase = async () => {
 
     // Create default admin user
     const { User } = associations;
-    const adminUser = await User.findOne({ where: { email: 'admin@crm.com' } });
+    let adminUser = await User.findOne({ where: { email: 'admin@crm.com' } });
+    
     if (!adminUser) {
-      await User.create({
+      adminUser = await User.create({
         name: 'Admin User',
         email: 'admin@crm.com',
         password: 'password123',
         role: 'admin'
       });
       console.log('✅ Default admin user created successfully');
+    } else {
+      // Ensure password is hashed if it's still plain text
+      if (!adminUser.password.startsWith('$2')) {
+        adminUser.password = 'password123';
+        await adminUser.save();
+        console.log('✅ Default admin user password hashed successfully');
+      }
     }
 
     console.log('🎉 Database initialization completed!');
